@@ -1,2 +1,2 @@
 # darkflipper
-Dark Energy Figure of Merit calculations for Likelihood pipelines
+Dark Energy Figure of Merit and Figure of Bias calculations for Likelihood pipelines
