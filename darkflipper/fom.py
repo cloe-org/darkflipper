@@ -1,6 +1,7 @@
 import numpy as np
-from shapely.geometry import Polygon
 from getdist import MCSamples
+from shapely.geometry import Polygon
+
 
 def polygon(samples, param1, param2, sigma_level=1, names=None):
     """
