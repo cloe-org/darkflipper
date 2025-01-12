@@ -27,6 +27,7 @@ pip install darkflipper
 - `getdist`
 - `numpy`
 - `shapely`
+- `matplotlib`
 
 ## Contributing
 
