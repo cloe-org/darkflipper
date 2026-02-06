@@ -2,14 +2,12 @@
   <img src="docs/darkflipper-logo-white.png" alt="darkflipper logo" width="400">
 </p>
 
-# 🐬 darkflipper
-
-**Flip the dark side of cosmological inference.**
+**Flip the dark side of statistics in cosmology.**
 Figures of Merit, Bias, and statistical diagnostics such as p-values and much more.
 
 ---
 
-## 🚀 What is _darkflipper_?
+## 🐬 What is _darkflipper_?
 
 `darkflipper` is a lightweight Python package delivering **essential statistical tools for cosmology** at ease:
 
