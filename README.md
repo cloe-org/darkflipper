@@ -1,6 +1,6 @@
 # ✨ darkflipper
 
-![darkflipper logo](docs/logo.png)
+![darkflipper logo](docs/darkflipper-logo.jpg)
 
 **Flip the dark side of cosmological inference.**  
 Figures of Merit, Bias, and statistical diagnostics such as p-values and much more.
