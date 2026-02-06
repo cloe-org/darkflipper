@@ -19,6 +19,14 @@ classifiers = [
 ]
 requires-python = ">=3.8"
 
+dependencies = [
+    "scipy",
+    "numpy",
+    "getdist",
+    "shapely",
+    "matplotlib"
+]
+
 [tool.hatch.version]
 source = "vcs"
 
