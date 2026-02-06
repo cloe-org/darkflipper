@@ -1,24 +1,40 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
 
 [project]
 name = "darkflipper"
-version = "0.0.1"
+dynamic = ["version"]
 description = "Dark Energy Figure of Merit and Figure of Bias for Likelihood Pipelines"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Guadalupe Cañas Herrera", email = "guadalupe.canasherrera@esa.int" }
+  { name = "Guadalupe Cañas Herrera", email = "canasherrera@strw.leidenuniv.nl" }
 ]
 keywords = ["dark energy", "cosmology", "Euclid", "Bayesian inference"]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
 ]
 requires-python = ">=3.8"
 
+dependencies = [
+    "scipy",
+    "numpy",
+    "getdist",
+    "shapely",
+    "matplotlib"
+]
 
-[tool.setuptools.packages.find]
-where = ["darkflipper"]
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "darkflipper/_version.py"
+
+[tool.pytest.ini_options]
+addopts = "--verbose --cov=cloelib"
+
+[tool.hatch.metadata]
+allow-direct-references = true

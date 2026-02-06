@@ -1,13 +1,14 @@
 import numpy as np
-from getdist import MCSamples
 from shapely.geometry import Polygon
 import matplotlib.pyplot as plt
 
 
-def polygon(samples, param1, param2, sigma_level=1, names=None, colors=None, verbose = False):
+def polygon(
+    samples, param1, param2, sigma_level=1, names=None, colors=None, verbose=False
+):
     """
-    Calculates the Figure of Merit (FoM) for marginalised 
-    2-dimensional posterior distributions using the Polygon 
+    Calculates the Figure of Merit (FoM) for marginalised
+    2-dimensional posterior distributions using the Polygon
     function from Shapely and matplotlib contour extraction.
 
     Parameters:
@@ -23,9 +24,9 @@ def polygon(samples, param1, param2, sigma_level=1, names=None, colors=None, ver
         list: List of FoM values for each sample.
     """
     if names is None:
-        names = [f"Sample {i+1}" for i in range(len(samples))]
+        names = [f"Sample {i + 1}" for i in range(len(samples))]
     if colors is None:
-        colors = ['red', 'blue', 'green', 'black']
+        colors = ["red", "blue", "green", "black"]
 
     sigma_lvls = {3: 0, 2: 1, 1: 2}  # Mapping for contour levels
     foms_array = []
@@ -37,13 +38,15 @@ def polygon(samples, param1, param2, sigma_level=1, names=None, colors=None, ver
         contour_levels = density.contours
 
         # Extract contours using plt.contour
-        contours = plt.contour(density.x, density.y, density.P, sorted(contour_levels), colors=color)
+        contours = plt.contour(
+            density.x, density.y, density.P, sorted(contour_levels), colors=color
+        )
         contour_path = contours.collections[sigma_lvls[sigma_level]].get_paths()[0]
-        
+
         # Get the vertices of the desired contour
         xy = contour_path.vertices
         poly = Polygon(xy)
-        
+
         # Calculate area and FoM
         area = poly.area
         fom = (2.3 * np.pi) / area
@@ -56,20 +59,22 @@ def polygon(samples, param1, param2, sigma_level=1, names=None, colors=None, ver
 
     plt.xlabel("Parameter 1", fontsize=16)
     plt.ylabel("Parameter 2", fontsize=16)
-    plt.legend();
-    plt.show();
+    plt.legend()
+    plt.show()
 
     foms_array.append(fom)
 
     return foms_array
 
 
-def covariance_matrix(samples, param1, param2, sigma_level=1, names=None, verbose = False):
+def covariance_matrix(
+    samples, param1, param2, sigma_level=1, names=None, verbose=False
+):
     """
-    Calculates the Figure of Merit (FoM) for marginalised 
-    2-dimensional posterior distributions using the determinant of the 
+    Calculates the Figure of Merit (FoM) for marginalised
+    2-dimensional posterior distributions using the determinant of the
     covariance matrix approach.
-    
+
     Parameters:
         samples (list): List of GetDist MCSamples objects.
         param1 (str): Name of the first parameter.
@@ -82,7 +87,7 @@ def covariance_matrix(samples, param1, param2, sigma_level=1, names=None, verbos
         list: List of FoM values for each sample.
     """
     if names is None:
-        names = [f"Sample {i+1}" for i in range(len(samples))]
+        names = [f"Sample {i + 1}" for i in range(len(samples))]
 
     foms_array = []
 

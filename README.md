@@ -1,48 +1,62 @@
-# darkflipper
+<p align="center">
+  <img src="docs/darkflipper-logo-white.png" alt="darkflipper logo" width="400">
+</p>
 
-## Table of Contents
+**Flip the dark side of statistics in cosmology.**
+Figures of Merit, Bias, and statistical diagnostics such as p-values and much more.
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+---
 
-## Introduction
+## 🐬 What is _darkflipper_?
 
-`darkflipper` is a simple python package for Figure of Merit and Figure of Bias calculations
+`darkflipper` is a lightweight Python package delivering **essential statistical tools for cosmology** at ease:
 
-## Installation
+It’s designed for scientists who:
 
-As simple as:
+- are investigating systematics in cosmological data
+- care about **Figures of Merit** _and_ **Figures of Bias** in cosmological inference
+- want results that are robust, transparent, and publication-ready without worrying about definitions
+
+---
+
+## 📦 Installation
+
+One command.
 
 ```sh
 pip install darkflipper
 ```
 
-### Prerequisites
+---
 
-- `python>3.8`
-- `getdist`
+## 🧩 Requirements
+
+`darkflipper` plays nicely with the standard packages:
+
+- Python ≥ 3.8
 - `numpy`
-- `shapely`
+- `scipy`
 - `matplotlib`
+- `getdist`
+- `shapely`
 
-## Contributing
+---
 
-If you would like to contribute, follow the following steps:
+## 🤝 Contributing
 
-1. Open an issue to let the `darkflipper` maintainers know about your contribution plans (new Euclid product? New feature? A suggestion?)
-2. Create a new branch:
+Want to help shape the dark side? We’d love to have you.
+
+1. **Open an issue** to discuss your idea — new feature, new statistics, or all-dreamy thought
+2. **Create a feature branch**
    ```sh
    git checkout -b feature/your-feature-name
    ```
-3. Commit your changes:
+3. **Commit your work**
    ```sh
-   git commit -m 'Add some feature'
+   git commit -m "Add awesome feature"
    ```
-4. Push to the branch:
+4. **Push it**
    ```sh
    git push origin feature/your-feature-name
    ```
-5. Open a pull request
-
+5. **Open a pull request** and let’s flip it together ✨

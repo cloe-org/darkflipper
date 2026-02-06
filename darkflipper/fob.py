@@ -1,10 +1,10 @@
 import numpy as np
-from getdist import MCSamples
 
-def parameter_bias(samples_unbiased, samples_biased, index, params, verbose = False):
+
+def parameter_bias(samples_unbiased, samples_biased, index, params, verbose=False):
     """
-    Calculate the Figure of Bias (FoB) from parameter shifts 
-    between biased and unbiased MCMC samples using best-fit 
+    Calculate the Figure of Bias (FoB) from parameter shifts
+    between biased and unbiased MCMC samples using best-fit
     values for two specified parameters.
 
     Parameters:
@@ -18,8 +18,8 @@ def parameter_bias(samples_unbiased, samples_biased, index, params, verbose = Fa
         float: FoB from parameter shifts.
     """
     # 1. Get parameter means
-    means_unbiased = samples_unbiased.getMeans(pars = index)
-    means_biased = samples_biased.getMeans(pars = index)
+    means_unbiased = samples_unbiased.getMeans(pars=index)
+    means_biased = samples_biased.getMeans(pars=index)
     # 2. Compute parameter shifts (Δθ)
     delta_theta = means_biased - means_unbiased
     # 3. Get the covariance matrix from the unbiased model
@@ -33,9 +33,9 @@ def parameter_bias(samples_unbiased, samples_biased, index, params, verbose = Fa
     return fob
 
 
-def chi2_bias(samples_unbiased, samples_biased, verbose = False):
+def chi2_bias(samples_unbiased, samples_biased, verbose=False):
     """
-    Calculate the Figure of Bias (FoB) from the chi-squared difference 
+    Calculate the Figure of Bias (FoB) from the chi-squared difference
     between biased and unbiased MCMC samples.
 
     Parameters:
@@ -58,4 +58,3 @@ def chi2_bias(samples_unbiased, samples_biased, verbose = False):
     if verbose:
         print(f"FoB (Chi-squared Bias): {fob_chi2}")
     return fob_chi2
-
