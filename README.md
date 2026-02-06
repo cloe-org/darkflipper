@@ -1,26 +1,29 @@
-# ✨ darkflipper
+<p align="center">
+  <img src="docs/darkflipper-logo-white.png" alt="darkflipper logo" width="400">
+</p>
 
-<img src="docs/darkflipper-logo.jpg" alt="darkflipper logo" width="200">
+# 🐬 darkflipper
 
-
-**Flip the dark side of cosmological inference.**  
+**Flip the dark side of cosmological inference.**
 Figures of Merit, Bias, and statistical diagnostics such as p-values and much more.
 
 ---
 
-## 🚀 What is *darkflipper*?
+## 🚀 What is _darkflipper_?
 
 `darkflipper` is a lightweight Python package delivering **essential statistical tools for cosmology** at ease:
 
 It’s designed for scientists who:
-- are investigating systematics in cosmological data 
-- care about **Figures of Merit** *and* **Figures of Bias** in cosmological inference
+
+- are investigating systematics in cosmological data
+- care about **Figures of Merit** _and_ **Figures of Bias** in cosmological inference
 - want results that are robust, transparent, and publication-ready without worrying about definitions
 
 ---
+
 ## 📦 Installation
 
-One command. 
+One command.
 
 ```sh
 pip install darkflipper
@@ -32,12 +35,12 @@ pip install darkflipper
 
 `darkflipper` plays nicely with the standard packages:
 
-- Python ≥ 3.8  
-- `numpy`  
-- `scipy`  
-- `matplotlib`  
-- `getdist`  
-- `shapely`  
+- Python ≥ 3.8
+- `numpy`
+- `scipy`
+- `matplotlib`
+- `getdist`
+- `shapely`
 
 ---
 
@@ -45,7 +48,7 @@ pip install darkflipper
 
 Want to help shape the dark side? We’d love to have you.
 
-1. **Open an issue** to discuss your idea — new feature, Euclid product, or wild-but-brilliant thought  
+1. **Open an issue** to discuss your idea — new feature, Euclid product, or wild-but-brilliant thought
 2. **Create a feature branch**
    ```sh
    git checkout -b feature/your-feature-name
