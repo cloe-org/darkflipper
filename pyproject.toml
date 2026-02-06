@@ -4,12 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "darkflipper"
-version = "0.0.1"
 description = "Dark Energy Figure of Merit and Figure of Bias for Likelihood Pipelines"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Guadalupe Cañas Herrera", email = "guadalupe.canasherrera@esa.int" }
+    { name = "Guadalupe Cañas Herrera", email = "canasherrera@strw.leidenuniv.nl" }
 ]
 keywords = ["dark energy", "cosmology", "Euclid", "Bayesian inference"]
 classifiers = [
@@ -21,4 +20,7 @@ requires-python = ">=3.8"
 
 
 [tool.setuptools.packages.find]
-where = ["darkflipper"]
+where = ["."]
+
+[tool.hatch.build.hooks.vcs]
+version-file = "darkflipper/_version.py"
