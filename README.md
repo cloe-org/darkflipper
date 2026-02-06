@@ -1,6 +1,6 @@
 # ✨ darkflipper
 
-![darkflipper logo](docs/darkflipper-logo.jpg){ width=200 }
+<img src="docs/darkflipper-logo.jpg" alt="darkflipper logo" width="200">
 
 
 **Flip the dark side of cosmological inference.**  
