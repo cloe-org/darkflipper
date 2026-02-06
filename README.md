@@ -46,7 +46,7 @@ pip install darkflipper
 
 Want to help shape the dark side? We’d love to have you.
 
-1. **Open an issue** to discuss your idea — new feature, Euclid product, or wild-but-brilliant thought
+1. **Open an issue** to discuss your idea — new feature, new statistics, or all-dreamy thought
 2. **Create a feature branch**
    ```sh
    git checkout -b feature/your-feature-name
