@@ -34,7 +34,7 @@ source = "vcs"
 version-file = "darkflipper/_version.py"
 
 [tool.pytest.ini_options]
-addopts = "--verbose --cov=cloelib"
+addopts = "--verbose --cov=darkflipper"
 
 [tool.hatch.metadata]
 allow-direct-references = true
