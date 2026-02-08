@@ -9,6 +9,15 @@
   "contributorsPerLine": 7,
   "contributors": [
     {
+      "login": "jclaramunt",
+      "name": "Juan Claramunt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32998547?v=4",
+      "profile": "http://jclaramunt.github.io",
+      "contributions": [
+        "ideas",
+        "review"
+        },
+        {
       "login": "gcanasherrera",
       "name": "Guadalupe Cañas-Herrera",
       "avatar_url": "https://avatars.githubusercontent.com/u/13239454?v=4",
