@@ -26,6 +26,6 @@ repos:
         exclude: ^(notebooks/|\.all-contributorsrc$)
       - id: mixed-line-ending
         args: [--fix=lf]
-        exclude: ^notebooks/
+        exclude: ^(notebooks/|\.all-contributorsrc$)
       - id: trailing-whitespace
         exclude: ^(notebooks/|\.all-contributorsrc$)
