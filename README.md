@@ -60,3 +60,15 @@ Want to help shape the dark side? We’d love to have you.
    git push origin feature/your-feature-name
    ```
 5. **Open a pull request** and let’s flip it together ✨
+
+## 🤝 Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
