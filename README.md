@@ -66,6 +66,13 @@ Want to help shape the dark side? We’d love to have you.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://jclaramunt.github.io"><img src="https://avatars.githubusercontent.com/u/32998547?v=4?s=100" width="100px;" alt="Juan Claramunt"/><br /><sub><b>Juan Claramunt</b></sub></a><br /><a href="#ideas-jclaramunt" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-jclaramunt" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
