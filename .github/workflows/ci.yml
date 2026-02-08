@@ -40,4 +40,5 @@ jobs:
           pip install pytest pytest-cov
       - name: Run tests
         run: |
+          # Exit code 5 means no tests were collected - don't fail in that case
           pytest || [ $? -eq 5 ]
