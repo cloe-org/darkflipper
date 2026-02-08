@@ -3,11 +3,10 @@
 from .fom import covariance_matrix, polygon
 from .fob import chi2_bias, parameter_bias
 from .pte import (
-    critical_value,
     effect_size,
     mahalanobis_distance,
     pvalue,
-    test_statistic,
+    theoretical_prediction,
 )
 
 __all__ = [
@@ -17,7 +16,6 @@ __all__ = [
     "chi2_bias",
     "pvalue",
     "mahalanobis_distance",
-    "test_statistic",
-    "critical_value",
     "effect_size",
+    "theoretical_prediction",
 ]
