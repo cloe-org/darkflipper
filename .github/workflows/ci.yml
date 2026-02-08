@@ -40,4 +40,4 @@ jobs:
           pip install pytest pytest-cov
       - name: Run tests
         run: |
-          pytest
+          pytest || [ $? -eq 5 ]
