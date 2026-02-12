@@ -12,7 +12,7 @@ repos:
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        exclude: ^notebooks/
+        exclude: ^(notebooks/|\.all-contributorsrc$)
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -23,9 +23,9 @@ repos:
       - id: check-merge-conflict
       - id: check-toml
       - id: end-of-file-fixer
-        exclude: ^notebooks/
+        exclude: ^(notebooks/|\.all-contributorsrc$)
       - id: mixed-line-ending
         args: [--fix=lf]
-        exclude: ^notebooks/
+        exclude: ^(notebooks/|\.all-contributorsrc$)
       - id: trailing-whitespace
-        exclude: ^notebooks/
+        exclude: ^(notebooks/|\.all-contributorsrc$)
