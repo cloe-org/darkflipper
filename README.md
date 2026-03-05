@@ -71,6 +71,7 @@ Want to help shape the dark side? We’d love to have you.
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://jclaramunt.github.io"><img src="https://avatars.githubusercontent.com/u/32998547?v=4?s=100" width="100px;" alt="Juan Claramunt"/><br /><sub><b>Juan Claramunt</b></sub></a><br /><a href="#ideas-jclaramunt" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-jclaramunt" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://gcanasherrera.com"><img src="https://avatars.githubusercontent.com/u/13239454?v=4?s=100" width="100px;" alt="Guadalupe Cañas-Herrera"/><br /><sub><b>Guadalupe Cañas-Herrera</b></sub></a><br /><a href="#code-gcanasherrera" title="Code">💻</a> <a href="#bug-gcanasherrera" title="Bug reports">🐛</a> <a href="#doc-gcanasherrera" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.santicasas.xyz"><img src="https://avatars.githubusercontent.com/u/6987716?v=4?s=100" width="100px;" alt="Santiago Casas"/><br /><sub><b>Santiago Casas</b></sub></a><br /><a href="#ideas-santiagocasas" title="Ideas, Planning, & Feedback">🤔</a> <a href="#code-santiagocasas" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
