@@ -33,12 +33,51 @@ pip install darkflipper
 
 `darkflipper` plays nicely with the standard packages:
 
-- Python ≥ 3.8
+- Python ≥ 3.10
 - `numpy`
 - `scipy`
-- `matplotlib`
+- `matplotlib` (≥ 3.6) and `contourpy`
 - `getdist`
 - `shapely`
+
+---
+
+## 🚀 Usage
+
+Most functions take [GetDist](https://getdist.readthedocs.io) `MCSamples`, so they work with chains from Cobaya, CosmoSIS, MontePython, Nautilus, …
+
+```python
+import darkflipper as dfp
+from getdist import loadMCSamples
+
+baseline = loadMCSamples("chains/baseline")
+systematic = loadMCSamples("chains/with_systematic")
+
+# Figure of Merit in the (w0, wa) plane
+dfp.covariance_matrix([baseline, systematic], "w0", "wa")  # 1/sqrt(det C)
+dfp.polygon([baseline, systematic], "w0", "wa", plot=False)  # contour area
+
+# Figure of Bias: shift of (w0, wa) in units of the baseline errors
+dfp.parameter_bias(baseline, systematic, ["w0", "wa"], ["w0", "wa"])
+
+# Goodness of fit of a theory vector to data
+dfp.pvalue(data, theory, cov, n_params=2)
+```
+
+| Function                 | What it computes                                                                                                                   |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `covariance_matrix`      | FoM = 1/√det(C) of two parameters                                                                                                  |
+| `polygon`                | FoM from the area of the 2D marginalised contour (68/95/99%), normalised to agree with `covariance_matrix` for Gaussian posteriors |
+| `parameter_bias`         | FoB = √(Δθᵀ C⁻¹ Δθ) between the means of two chains                                                                                |
+| `chi2_bias`              | FoB = √Δχ² between the mean χ² of two chains                                                                                       |
+| `pvalue`                 | χ² probability to exceed, with dof = N<sub>data</sub> − `n_params`                                                                 |
+| `mahalanobis_distance`   | √χ² between data and theory                                                                                                        |
+| `effect_size`            | √(χ²/N<sub>data</sub>)                                                                                                             |
+| `theoretical_prediction` | tr(C)/N<sub>samples</sub>                                                                                                          |
+
+> **Note:** `polygon` relies on GetDist's kernel density estimate. For very degenerate contours (correlation ≳ 0.99), smoothing broadens the contour and the FoM is underestimated, so cross-check with `covariance_matrix`.
+
+A worked example notebook lives in the [cloe-org playground](https://github.com/cloe-org/playground/blob/main/tutorials/statistics/darkflipper.ipynb).
 
 ---
 
@@ -51,15 +90,21 @@ Want to help shape the dark side? We’d love to have you.
    ```sh
    git checkout -b feature/your-feature-name
    ```
-3. **Commit your work**
+3. **Run the tests and checks**
+   ```sh
+   pip install -e ".[dev]"
+   pytest
+   pre-commit run --all-files
+   ```
+4. **Commit your work**
    ```sh
    git commit -m "Add awesome feature"
    ```
-4. **Push it**
+5. **Push it**
    ```sh
    git push origin feature/your-feature-name
    ```
-5. **Open a pull request** and let’s flip it together ✨
+6. **Open a pull request** and let’s flip it together ✨
 
 ## 🤝 Contributors
 
