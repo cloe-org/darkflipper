@@ -14,18 +14,31 @@ authors = [
 keywords = ["dark energy", "cosmology", "Euclid", "Bayesian inference"]
 classifiers = [
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Astronomy",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent"
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 
 dependencies = [
     "scipy",
     "numpy",
     "getdist",
     "shapely",
-    "matplotlib"
+    "matplotlib>=3.6",
+    "contourpy"
 ]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "pre-commit"]
+
+[project.urls]
+Homepage = "https://github.com/cloe-org/darkflipper"
+Issues = "https://github.com/cloe-org/darkflipper/issues"
 
 [tool.hatch.version]
 source = "vcs"

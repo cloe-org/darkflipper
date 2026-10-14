@@ -33,8 +33,7 @@ def _chi_squared_statistic(data, theory, cov):
     Notes
     -----
     The chi-squared statistic assumes the covariance matrix is positive definite.
-    For better numerical stability with ill-conditioned matrices, consider using
-    np.linalg.solve instead of matrix inversion.
+    It is computed with np.linalg.solve rather than explicit inversion.
 
     Examples
     --------
@@ -44,11 +43,10 @@ def _chi_squared_statistic(data, theory, cov):
     >>> chi2 = _chi_squared_statistic(data, theory, cov)
     """
     diff = data - theory
-    inv_cov = np.linalg.inv(cov)
-    return diff @ inv_cov @ diff
+    return diff @ np.linalg.solve(cov, diff)
 
 
-def pvalue(data, theory, cov):
+def pvalue(data, theory, cov, n_params=0):
     """
     Calculate the p-value for a chi-squared test.
 
@@ -64,6 +62,9 @@ def pvalue(data, theory, cov):
         Theoretical or expected values corresponding to the data.
     cov : array-like
         Covariance matrix for the chi-squared statistic calculation.
+    n_params : int, optional
+        Number of parameters fitted to obtain ``theory``, subtracted from the
+        degrees of freedom (default is 0).
 
     Returns
     -------
@@ -73,12 +74,11 @@ def pvalue(data, theory, cov):
 
     Notes
     -----
-    The degrees of freedom are determined by the length of the data array.
+    The degrees of freedom are ``len(data) - n_params``.
     The chi-squared statistic is computed using the provided covariance matrix.
 
     """
-    dof = len(data)  # degrees of freedom
-    data - theory
+    dof = len(data) - n_params  # degrees of freedom
     chi2 = _chi_squared_statistic(data, theory, cov)
     p = stats.chi2.sf(chi2, dof)
     return p
