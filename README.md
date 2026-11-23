@@ -33,7 +33,7 @@ pip install darkflipper
 
 `darkflipper` plays nicely with the standard packages:
 
-- Python ≥ 3.8
+- Python ≥ 3.12
 - `numpy`
 - `scipy`
 - `matplotlib`
