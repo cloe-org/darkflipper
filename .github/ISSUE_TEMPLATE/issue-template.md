@@ -1,0 +1,26 @@
+---
+name: Issue template
+about: General template for darkflipper issues
+title: ""
+labels: ""
+assignees: ""
+---
+
+## 📝 Issue Summary
+
+<!-- Briefly describe the issue. What problem/feature/enhacement need to be addressed? -->
+
+### ✅ Expected Outcome
+
+- **Goal 1**: Describe the first goal this issue addresses
+- **Goal 2**: Describe the second goal this issue addresses
+
+### 🔄 Steps to Reproduce (if applicable)
+
+1. Step 1
+2. Step 2
+3. Step 3
+
+### 📌 Additional Notes
+
+<!-- Add any extra context, logs, or screenshots here -->
